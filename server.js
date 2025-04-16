@@ -1,4 +1,4 @@
-const UUID=process.env.UUID||'cf83007a-1db2-4ae5-a148-e7820566df5e'
+const UUID=process.env.UUID||'cf83007a-1db6-4ae5-a148-e7820566df5e'
 const html=`
 <!DOCTYPE html>
 <html>
@@ -249,7 +249,7 @@ const logcb= (...args)=>console.log.bind(this,...args);
 const errcb= (...args)=>console.error.bind(this,...args);
 
 const uuid= UUID.replace(/-/g, "");
-const port= process.env.PORT||3000;
+const port= process.env.PORT||8080;
 
 const wss=new WebSocket.Server({server,path:'/ws'});
 wss.on('connection', ws=>{
